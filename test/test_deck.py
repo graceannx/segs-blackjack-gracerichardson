@@ -6,6 +6,7 @@ class DeckTestCase(unittest.TestCase):
 
     def setUp(self):  # this method will be run before each test
         self.deck = Deck()
+        
 
     def tearDown(self):  # this method will be run after each tests
         pass

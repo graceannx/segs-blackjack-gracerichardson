@@ -1,0 +1,23 @@
+
+
+* - as I am using the starter code provided, I am attempting to continue with the style and structure of the conde provided to create a seamless tr
+- because of this, copilot is also suggesting to use the same style of code as the starter code*
+
+DESIGN LOG:
+My first step included asking the question: 
+    How am I going to design the card structure? 
+- I searched google to find common card structures, and naming conventions 
+    and noted that a common solution would be to create a card class with suit and value attributes so I implemented this into my code
+
+Next, I needed to fill my deck with cards, as there is already a deck class with a cards array, I knew i needed to fill this array with 52 unique instatiations of the card class. 
+to do this, I defined the suit and val, 
+
+CODE LOG: 
+1. created a card class with suit and value attributes
+    a. I have copilot installed, it suggested for me to create a __str__ method: 
+        as I am not yet sure what the design of my card structure will be, 
+        and how I will call my card class, I have commented this section out for later use. 
+2. I then filled my deck with 52 cards, by 
+    a. iterating through the suits and values, creating an instatiation of a card with each suit and value combination, and appending it to the cards array. 
+3. I then ran my unit test and it passed! so I committed to the firsttestpass branch. 
+
