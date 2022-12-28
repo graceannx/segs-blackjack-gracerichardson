@@ -21,3 +21,15 @@ CODE LOG:
     a. iterating through the suits and values, creating an instatiation of a card with each suit and value combination, and appending it to the cards array. 
 3. I then ran my unit test and it passed! so I committed to the firsttestpass branch. 
 
+Next, I needed to create a player class, so I could create instatiations of the players to make a playable game. 
+I knew the player class would need to have a hand attribute that I could fill with cards, so I decided I would create this in the form of an array of card instances
+
+CODE LOG:
+4. Created a player class with hand and score attributes
+    a. Again, as I have copilot installed, the suggestion was to create some generic card handling methods including: draw, discard, add score, reset score, discard. I accepted these suggestions and commented out the ones I dont need for now,
+    as I dont wish to overcomplicate my logic. 
+    b. In my draw method, I used a pop off of the deck array, and I knew that if I were to pop off of my current deck I would be taking an unshuffled deck, so I added a shuffle method to my deck class, importing the random module and utilising pythons shuffle method. 
+
+
+
+
