@@ -33,7 +33,23 @@ CODE LOG:
 
 Next, I need to modify my initialisation to be able to pass the first scenario, making the 
 CODE LOG: 
-5. Modified my 
+5.a. Modified my player class to take in an instatiation of my deck
+b. changed my draw method to be able to take as many cards as needed, 
+c. created a test to test the player initialisation
+d. added a deal (call of the draw method) to my player initialisation (i would modify the placement of this call if I scaled up to have multiple games)
+e. debugged
+
+After committing this code, I moved on to scenario 2, this involved creating the scoring system and implementing some validation 
+I wrote a test function to guide this next stage in the process. I realised I needed to create a score attribute in my card class, and a score calculating system into my hit method, as the only time a player would accumulate a card was when this method was called. As in blackjack an ace can be used as a 1 or 11, I decided to leave the scoring sysem as 11, and set up a flagging system inside the player class. 
+I then wrote a litle print function into my test so I could debug my scoring system, and I realised I hadn't called my shuffle method in my deck initialisation so I was always getting the same output. 
+As i was writing my test, I had skipped over the hand validation, as I knew i needed to establish my scoring system first. 
+As I completed that task I was able to more on to creating a test for "given I have a valid hand" which meant implementing a condition that the score of the hand must be less than 21 for the player to be able to hit. 
+To do this I modified the hit method to include both a check that the player was not already out of the game, to protect from user error, and a validate hand method call that checked the hand each time a card is drawn. 
+I ran my unit tests and they passed! So i committed my code and merged my branch as scenario 2 was complete! 
+
+
+
+
 
 
 
