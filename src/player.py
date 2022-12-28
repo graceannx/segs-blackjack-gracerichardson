@@ -6,15 +6,31 @@ class Player(Deck):
         self.hand = []
         self.name = ""
         self.score = 0
+        self.Aceflag = False
+        self.ingame = True
         self.hit(2, Deck)
-        f"blah {self.hand}"
 
     def __str__(self):
         return f"{self.name} has {self.score} points."
     
     def hit(self, number_of_cards, Deck):
-        for i in range(number_of_cards):
-            self.hand.append(Deck.cards.pop())
+        if self.ingame == True:
+            for i in range(number_of_cards):
+                    popcard = Deck.cards.pop()
+                    if popcard.rank == "Ace":
+                        Aceflag = True 
+                        if self.score > 10:
+                            popcard.score = 1
+                    self.score += popcard.score
+                    self.hand.append(popcard)
+                    if self.validate_hand() == False:
+                        print("You have busted!")
+                        self.ingame = False
+                        break
+        else: 
+            print("You are out of the game!")
+
+            
     
 
     def discard(self):
@@ -31,4 +47,10 @@ class Player(Deck):
    
     def player_set_name(self):
         self.name = input("What is your name? ")
+
+    def validate_hand(self):
+        if self.score > 21:
+            return False
+        else:
+            return True
         
