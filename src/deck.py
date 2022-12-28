@@ -1,5 +1,7 @@
 from src.card import Card
 
+
+
 class Deck:
     def __init__(self):
         suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
@@ -8,6 +10,19 @@ class Deck:
         for suit in suits: 
             for rank in ranks: 
                 self.cards.append(Card(suit, rank))
+        self.shuffle()
+
+    def __str__(self):
+        return f"Deck of {self.count()} cards."
+    
+    def shuffle(self):
+        import random
+        random.shuffle(self.cards)
+
+        
+    
+
+
 
 
 

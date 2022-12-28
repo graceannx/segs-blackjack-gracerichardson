@@ -21,3 +21,35 @@ CODE LOG:
     a. iterating through the suits and values, creating an instatiation of a card with each suit and value combination, and appending it to the cards array. 
 3. I then ran my unit test and it passed! so I committed to the firsttestpass branch. 
 
+Next, I needed to create a player class, so I could create instatiations of the players to make a playable game. 
+I knew the player class would need to have a hand attribute that I could fill with cards, so I decided I would create this in the form of an array of card instances
+
+CODE LOG:
+4. Created a player class with hand and score attributes
+    a. Again, as I have copilot installed, the suggestion was to create some generic card handling methods including: draw, discard, add score, reset score, discard. I accepted these suggestions and commented out the ones I dont need for now,
+    as I dont wish to overcomplicate my logic. 
+    b. In my draw method, I used a pop off of the deck array, and I knew that if I were to pop off of my current deck I would be taking an unshuffled deck, so I added a shuffle method to my deck class, importing the random module and utilising pythons shuffle method. 
+    c. At this point, I attempted to migrate this draw method into the deck class, considering that having the dealing be a part of the player class would perhaps not be a good idea for the scalability of the application, however I encountered an error with circular importing, and decided that passing player instatiations into the deck wasnt a good idea, so I commented this out to reset to a passing point and committed my code. 
+
+Next, I need to modify my initialisation to be able to pass the first scenario, making the 
+CODE LOG: 
+5.a. Modified my player class to take in an instatiation of my deck
+b. changed my draw method to be able to take as many cards as needed, 
+c. created a test to test the player initialisation
+d. added a deal (call of the draw method) to my player initialisation (i would modify the placement of this call if I scaled up to have multiple games)
+e. debugged
+
+After committing this code, I moved on to scenario 2, this involved creating the scoring system and implementing some validation 
+I wrote a test function to guide this next stage in the process. I realised I needed to create a score attribute in my card class, and a score calculating system into my hit method, as the only time a player would accumulate a card was when this method was called. As in blackjack an ace can be used as a 1 or 11, I decided to leave the scoring sysem as 11, and set up a flagging system inside the player class. 
+I then wrote a litle print function into my test so I could debug my scoring system, and I realised I hadn't called my shuffle method in my deck initialisation so I was always getting the same output. 
+As i was writing my test, I had skipped over the hand validation, as I knew i needed to establish my scoring system first. 
+As I completed that task I was able to more on to creating a test for "given I have a valid hand" which meant implementing a condition that the score of the hand must be less than 21 for the player to be able to hit. 
+To do this I modified the hit method to include both a check that the player was not already out of the game, to protect from user error, and a validate hand method call that checked the hand each time a card is drawn. 
+I ran my unit tests and they passed! So i committed my code and merged my branch as scenario 2 was complete! 
+
+
+
+
+
+
+

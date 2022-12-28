@@ -1,11 +1,14 @@
 import unittest
 from src.deck import Deck
+from src.card import Card
+from src.player import Player
 
 
 class DeckTestCase(unittest.TestCase):
 
     def setUp(self):  # this method will be run before each test
         self.deck = Deck()
+
         
 
     def tearDown(self):  # this method will be run after each tests
