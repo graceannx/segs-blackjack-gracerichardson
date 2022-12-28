@@ -1,19 +1,21 @@
-#from src.card import Card
-#from src.deck import Deck
+from src.card import Card
+from src.deck import Deck
 
-class Player:
-    def __init__(self):
+class Player(Deck):
+    def __init__(self, Deck):
         self.hand = []
         self.name = ""
         self.score = 0
-       # Deck.deal(self, 2)
-        f"{self.hand}"
+        self.hit(2, Deck)
+        f"blah {self.hand}"
 
     def __str__(self):
         return f"{self.name} has {self.score} points."
     
-    def hit(self, deck):
-        self.hand.append(deck.deal(1))
+    def hit(self, number_of_cards, Deck):
+        for i in range(number_of_cards):
+            self.hand.append(Deck.cards.pop())
+    
 
     def discard(self):
         return self.hand.pop()

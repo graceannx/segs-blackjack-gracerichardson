@@ -29,7 +29,11 @@ CODE LOG:
     a. Again, as I have copilot installed, the suggestion was to create some generic card handling methods including: draw, discard, add score, reset score, discard. I accepted these suggestions and commented out the ones I dont need for now,
     as I dont wish to overcomplicate my logic. 
     b. In my draw method, I used a pop off of the deck array, and I knew that if I were to pop off of my current deck I would be taking an unshuffled deck, so I added a shuffle method to my deck class, importing the random module and utilising pythons shuffle method. 
+    c. At this point, I attempted to migrate this draw method into the deck class, considering that having the dealing be a part of the player class would perhaps not be a good idea for the scalability of the application, however I encountered an error with circular importing, and decided that passing player instatiations into the deck wasnt a good idea, so I commented this out to reset to a passing point and committed my code. 
 
+Next, I need to modify my initialisation to be able to pass the first scenario, making the 
+CODE LOG: 
+5. Modified my 
 
 
 

@@ -1,5 +1,5 @@
 from src.card import Card
-from src.player import Player
+
 
 
 class Deck:
@@ -18,9 +18,7 @@ class Deck:
         import random
         random.shuffle(self.cards)
 
-    def deal(self,player,number_of_cards):
-        for i in range(number_of_cards):
-            player.hand.append(self.cards.pop())
+        
     
 
 
