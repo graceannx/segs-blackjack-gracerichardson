@@ -53,7 +53,12 @@ The final three scenarios tested the edge cases of the code. So I wrote these in
 Upon writing test scenario 7, I realised my logic couldn't deal with having two tens and one ace, i realised i needed to change my aceflag from being a flag to being a counting system, so I was able to account for the possibility of more than one ace. This would be especially important if i scaled the game up to deal with multiple decks as the possibility of having more than one ace would increase! I also realised in creating these test cases that I needed to further modularise all my code so i spent some time doing that in this stage. 
 I ended up figuring out the logic to account for the possibility of having multiple aces, and tested the edge case of having four aces in a hand. My test passed so I committed my code and merged my branch! 
   
-
+CODE LOG
+7.a Created a playable output from the three classes
+b. modified some methods so the only print outputs (if not in case of error) came from play method. 
+c. added dealer play function to player class to account for the automation of the dealer (i.e stand at 17)
+e. commented through the code for readability 
+f. added sleep timers for user experience
 
 
 

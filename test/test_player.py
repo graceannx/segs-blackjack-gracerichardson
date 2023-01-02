@@ -64,6 +64,7 @@ class PlayerTestCase(unittest.TestCase):
         self.player.acecount = 1
         self.player.add_score(self.player.check_score())
         score2 = self.player.check_score()
+        self.player.show_hand()
         self.assertEqual(score2, 21)
         print(score2)
     
@@ -81,6 +82,18 @@ class PlayerTestCase(unittest.TestCase):
         score3 = self.player.check_score()
         self.assertEqual(score3, 21)
         print(score3)
+
+    def test_scenario_9(self): # Given that I have a nine, an ace, and another ace,When my score is evaluated, Then my score is 21
+        self.player.reset_hand()
+        self.player.reset_score()
+        self.player.hand.append(Card("Spades", "9"))
+        self.player.hand.append(Card("Hearts", "Ace"))
+        self.player.hand.append(Card("Diamonds", "Ace"))
+        self.player.acecount = 2
+        self.player.add_score(self.player.check_score())
+        score4 = self.player.check_score()
+        self.assertEqual(score4, 21)
+        print(score4)
 
 
 if __name__ == '__main__':
