@@ -61,6 +61,8 @@ class PlayerTestCase(unittest.TestCase):
         self.player.hand.append(Card("Spades", "King"))
         self.player.hand.append(Card("Spades", "Queen"))
         self.player.hand.append(Card("Spades", "Ace"))
+        self.player.acecount = 1
+        self.player.add_score(self.player.check_score())
         score2 = self.player.check_score()
         self.assertEqual(score2, 21)
         print(score2)
@@ -69,13 +71,13 @@ class PlayerTestCase(unittest.TestCase):
         self.player.reset_hand()
         self.player.reset_score()
         self.player.hand.append(Card("Spades", "Ace"))
-        self.aceflag = True
         self.player.hand.append(Card("Hearts", "Ace"))
         self.player.hand.append(Card("Clubs", "Jack"))
         self.player.hand.append(Card("Diamonds", "Ace"))
         self.player.hand.append(Card("Diamonds", "7"))
         self.player.hand.append(Card("Clubs", "Ace"))
-        
+        self.player.acecount = 4
+        self.player.add_score(self.player.check_score())
         score3 = self.player.check_score()
         self.assertEqual(score3, 21)
         print(score3)
