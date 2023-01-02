@@ -47,6 +47,13 @@ As I completed that task I was able to more on to creating a test for "given I h
 To do this I modified the hit method to include both a check that the player was not already out of the game, to protect from user error, and a validate hand method call that checked the hand each time a card is drawn. 
 I ran my unit tests and they passed! So i committed my code and merged my branch as scenario 2 was complete! 
 
+I then created a new branch and moved on to completing the rest of the test scenarios. The next one involved implementing a stand function inside of the player method, which was quite simple as I was able to simply repeat the code from my other methods, so there was a user output and reset my flags. I had written in my validation into my methods so I was able to move on from scenario 4, and I had already written a bust method so I was able to move quite quickly past these, but in order to maintain the robust nature of my code I wrote some tests to ensure that these scenarios were fufilled as I expected. 
+When writing my test for scenario 4 I realised that I didnt have much validation around the updating of my score/I wasnt using a very object oriented approach for the updating of this variable. I had already written a validate hand function, so to ensure that the only time that my score attribute was updated was by the add score method, so that there was always a failsafe in place, I migrated my code into the a method call. 
+The final three scenarios tested the edge cases of the code. So I wrote these into some tests, as I had already written code to account for the ace edge case, I used these tests to ensure my logic was correct. 
+Upon writing test scenario 7, I realised my logic couldn't deal with having two tens and one ace, i realised i needed to change my aceflag from being a flag to being a counting system, so I was able to account for the possibility of more than one ace. This would be especially important if i scaled the game up to deal with multiple decks as the possibility of having more than one ace would increase! I also realised in creating these test cases that I needed to further modularise all my code so i spent some time doing that in this stage. 
+I ended up figuring out the logic to account for the possibility of having multiple aces, and tested the edge case of having four aces in a hand. My test passed so I committed my code and merged my branch! 
+  
+
 
 
 
