@@ -1,4 +1,4 @@
-## Blackjack Tech Test - Starter Code
+## Blackjack Tech Test - Grace Richardson
 
 This code is an extension of the starter code provided.
 
