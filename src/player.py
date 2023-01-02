@@ -4,11 +4,12 @@ from src.deck import Deck
 class Player(Deck):
     def __init__(self, Deck):
         self.hand = []
-        self.name = ""
+        self.name = "Dealer"
         self.score = 0
         self.acecount = 0 #list of aces in hand
         self.ingame = True
         self.bustflag = False
+        self.stand_score = 0
         self.hit(2, Deck)
 
     def __str__(self):
@@ -22,7 +23,6 @@ class Player(Deck):
                     if popcard.rank == "Ace": #check if card is an ace and add to count of aces
                         self.acecount += 1
                     if self.add_score(popcard.score) == False: #call addscore method, which adds up score of hand and adjusts for aces if needed, returns false if bust.
-                        print("You have busted!")
                         self.bustflag = True
                         self.ingame = False #set end of game flag
                         break
@@ -33,13 +33,6 @@ class Player(Deck):
     def stand(self, Deck): #if player stands, sets current score to end score, sets end of game flag and displays user message
         self.stand_score = self.score
         self.ingame = False #set end of game flag
-        print("You have chosen to stand!") #output stand message
-        print("Your score is: ", self.stand_score)
-        print("Your hand is: ")
-        for i in range(len(self.hand)):
-            print(self.hand[i].rank)
-            print(self.hand[i].suit)
-
     def discard(self):
         return self.hand.pop() #remove card from hand
 
@@ -83,4 +76,23 @@ class Player(Deck):
                     self.acecount -= 1
                     break
 
+    def show_hand(self):
+        for i in range(len(self.hand)):
+            print (f"{self.hand[i].rank} of {self.hand[i].suit}")
+
+    def dealer_play(self, Deck):
+        if self.score < 17:
+            self.hit(1, Deck)
+            if self.score >= 17:
+                self.stand(Deck)
+                self.stand_score = self.score
+                self.ingame = False
+        else:
+            self.stand_score = self.score
+            self.ingame = False
+
+
+
+
         
+
