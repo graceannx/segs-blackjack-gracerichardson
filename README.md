@@ -21,7 +21,7 @@ This code is an extension of the starter code provided.
 ### Future Sprint Goals 
 #### Big Goals
 - I would like to scale up the play method to allow for multiple decks and multiple players
-- I would like to add a UI, so the 
+- I would like to add a UI, to improve the user experience
 - I would like to incorporate a betting system 
 - I would like to allow for multiple games to be played per 'session' involving adding a backend to store data across plays
 #### Quick Wins
