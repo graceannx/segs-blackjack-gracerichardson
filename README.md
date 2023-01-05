@@ -2,8 +2,7 @@
 
 This code is an extension of the starter code provided.
 
-### Getting started
-
+### Program Exce
 - To run the code
     - If you have Python 3 installed:
         - Open a terminal window and navigate to the folder containing this README.
@@ -16,8 +15,8 @@ This code is an extension of the starter code provided.
 
 ### Log of Workflow
 - In the design folder there is a text file called `workflow_log.txt`
-- In this file is a log of my test driven approach and methodologies used. 
-- I have also included a class diagram to give an outline of my approach. 
+- In this file is a log of my approach with explanations of each stage and my process. 
+- I have also included a class diagram to help explain my code structure.  
 
     
 
