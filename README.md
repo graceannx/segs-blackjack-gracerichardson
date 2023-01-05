@@ -18,7 +18,6 @@ This code is an extension of the starter code provided.
 - In this file is a log of my approach with explanations of each stage and my process. 
 
 
-### Future Goals 
 
 # Big Goals
 - I would like to scale up the play method to allow for multiple decks and multiple players
