@@ -4,7 +4,7 @@ from src.deck import Deck
 class Player(Deck):
     def __init__(self, Deck):
         self.hand = []
-        self.name = "Dealer"
+        self.name = "player" #default name
         self.score = 0
         self.acecount = 0 #list of aces in hand
         self.ingame = True
@@ -16,8 +16,8 @@ class Player(Deck):
         return f"{self.name} has {self.score} points."
     
     def hit(self, number_of_cards, Deck): #method to hit, takes number of cards to take and deck to take from as arguments
-        if self.ingame == True:
-            for i in range(number_of_cards):
+        if self.ingame == True: #check if player is still in game
+            for i in range(number_of_cards): #for each card to take
                     popcard = Deck.cards.pop() #take card from top of deck
                     self.hand.append(popcard) #add card to player's hand
                     if popcard.rank == "Ace": #check if card is an ace and add to count of aces
@@ -49,7 +49,7 @@ class Player(Deck):
     def reset_hand(self): #reset hand method, used for testing
         self.hand = []
    
-    def player_set_name(self): #set name method, not yet used
+    def player_set_name(self): #set name method
         self.name = input("What is your name? ")
 
     def validate_hand(self):
@@ -57,7 +57,7 @@ class Player(Deck):
             print("ERROR: Score is not equal qto the sum of the cards in the hand!")
             return False
 
-        if self.score > 21:     #check if score is over 21, return bool
+        if self.score > 21:   #check if score is over 21, return bool
             return False
         else:
             return True
@@ -76,11 +76,11 @@ class Player(Deck):
                     self.acecount -= 1
                     break
 
-    def show_hand(self):
+    def show_hand(self): #method to print hand to console
         for i in range(len(self.hand)):
             print (f"{self.hand[i].rank} of {self.hand[i].suit}")
 
-    def dealer_play(self, Deck):
+    def dealer_play(self, Deck): #method to automate dealer play
         if self.score < 17:
             self.hit(1, Deck)
             if self.score >= 17:

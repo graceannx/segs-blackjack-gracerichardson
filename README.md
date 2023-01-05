@@ -2,8 +2,7 @@
 
 This code is an extension of the starter code provided.
 
-### Getting started
-
+### Introduction
 - To run the code
     - If you have Python 3 installed:
         - Open a terminal window and navigate to the folder containing this README.
@@ -16,8 +15,21 @@ This code is an extension of the starter code provided.
 
 ### Log of Workflow
 - In the design folder there is a text file called `workflow_log.txt`
-- In this file is a log of my test driven approach and methodologies used. 
-- I have also included a class diagram to give an outline of my approach. 
+- In this file is a log of my approach with explanations of each stage and my process. 
+
+
+### Future Goals 
+
+# Big Goals
+- I would like to scale up the play method to allow for multiple decks and multiple players
+- I would like to add a UI, so the 
+- I would like to incorporate a betting system 
+- I would like to allow for multiple games to be played per 'session' involving adding a backend to store data across plays
+# Small Goals 
+- I would like to add a class diagram aid my code's readability 
+- I would like to further modularise my hit method, at the moment there is a large difference between the used in testing and those used in my play() method. If I were to scale up the code the way it is now, there would be alot more work needed per test, so this would increase my efficiency in the longterm
+- I would like to mockup a UI in Adobe XD
+
 
     
 
